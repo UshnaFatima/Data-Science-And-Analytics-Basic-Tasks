@@ -1,0 +1,77 @@
+
+                                    PROJECT REPORT
+                              Task: Credit Risk Prediction
+
+
+1. OBJECTIVE
+------------
+The goal of this project is to build a machine learning model to predict whether a loan applicant is likely to default on a loan. This binary classification task helps financial institutions assess credit risk and make informed lending decisions.
+
+2. DATASET
+----------
+* Source File: loan_dataset_20000.csv
+* Description: The dataset contains 20,000 records of loan applicants.
+* Key Features:
+  - Numerical: Annual Income, Credit Score, Loan Amount, Debt-to-Income Ratio, etc.
+  - Categorical: Education Level, Employment Status, Loan Purpose, Grade, etc.
+* Target Variable: 'loan_paid_back' (1 = Paid Back/Non-Default, 0 = Default)
+
+3. METHODOLOGY
+--------------
+The project was executed in the following stages:
+
+A. Exploratory Data Analysis (EDA)
+   - Visualized the distribution of Loan Amounts and Annual Income.
+   - Analyzed the count of applicants based on Education Level.
+   - Examined the balance of the Target Variable (Loan Repayment Status).
+
+B. Data Preprocessing
+   - Handling Missing Values:
+     * Numerical columns imputed with the 'median'.
+     * Categorical columns imputed with the 'most frequent' value.
+   - Feature Engineering:
+     * Numerical features were standardized using StandardScaler.
+     * Categorical features were transformed using OneHotEncoder.
+   - Train-Test Split: Data was split into 80% training and 20% testing sets.
+
+C. Model Training
+   - Algorithm: Logistic Regression
+   - Setup: Implemented via a Scikit-Learn Pipeline combining preprocessing 
+     and the classifier to prevent data leakage and streamline predictions.
+
+4. MODEL EVALUATION & RESULTS
+-----------------------------
+The Logistic Regression model was evaluated on the test set.
+
+* Accuracy: 88.05%
+
+* Confusion Matrix:
+  ---------------------------------
+  |                 | Predicted 0 | Predicted 1 |
+  |-----------------|-------------|-------------|
+  | Actual 0 (Def)  |     461     |     357     |
+  | Actual 1 (Paid) |     121     |    3061     |
+  ---------------------------------
+
+* Classification Report Summary:
+  - The model performs exceptionally well on the majority class (Paid Back) 
+    with a recall of 0.96.
+  - Identification of defaults (Class 0) has a precision of 0.79 and recall 
+    of 0.56, which is typical for imbalanced credit datasets but effectively 
+    filters out high-risk candidates.
+
+5. VISUALIZATIONS GENERATED
+---------------------------
+1. Distribution of Loan Amount (Histogram)
+2. Applicants by Education Level (Bar Chart)
+3. Distribution of Annual Income (Histogram)
+4. Target Distribution (Count Plot)
+5. Confusion Matrix (Heatmap)
+
+6. DEPENDENCIES
+---------------
+To run the analysis code, the following Python libraries are required:
+- pandas
+- matplotlib
+- seaborn
+- scikit-learn
