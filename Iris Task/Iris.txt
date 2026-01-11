@@ -1,0 +1,67 @@
+🌸 Iris Dataset Analysis – Project Overview
+Objective
+
+The goal of this project is to understand how to read, summarize, and visualize a dataset using Python.
+We used the Iris dataset, a classic dataset in machine learning, to explore key data analysis and visualization techniques.
+
+Steps Performed
+1. Importing Libraries
+We started by importing:
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+These libraries are essential for data manipulation (pandas) and visualization (seaborn, matplotlib).
+
+
+2. Loading the Dataset
+The dataset (IRIS.csv) was loaded using:
+df = pd.read_csv("IRIS.csv")
+To understand the structure, we inspected:
+df.shape      # Rows and columns count
+df.columns    # List of feature names
+df.head()     # First few rows
+This confirmed that the dataset contains measurements of Iris flowers — sepal and petal length/width — along with their species labels.
+
+
+3. Summarizing the Data
+We generated summary statistics using:
+df.describe()
+This provided an overview of each feature’s mean, standard deviation, and range, helping to detect any irregularities or patterns.
+
+
+4. Visualizations
+We used matplotlib and seaborn to explore the dataset visually:
+
+Scatter Plot:
+sns.scatterplot(data=df, x="sepal_length", y="sepal_width", hue="species")
+Showed relationships between sepal length and width across species.
+
+Histogram:
+sns.histplot(data=df, x="petal_length", kde=True)
+Displayed the distribution of petal length and helped identify data spread.
+
+Box Plot:
+sns.boxplot(data=df, x="species", y="sepal_length")
+Revealed the spread of sepal lengths and detected potential outliers.
+
+
+
+
+
+Tools & Technologies
+Python 3
+pandas – for data loading and manipulation
+seaborn – for high-level visualization
+matplotlib – for custom plotting and fine control
+
+
+Key Learnings
+How to load and inspect data using pandas
+How to summarize data using descriptive statistics
+How to visualize relationships, distributions, and outliers using seaborn and matplotlib
+
+
+Conclusion
+This project provides a clear introduction to data exploration and visualization in Python.
+By analyzing the Iris dataset, we practiced essential skills in data handling, descriptive statistics, and graphical analysis — the foundation for any data science or machine learning workflow.
+
