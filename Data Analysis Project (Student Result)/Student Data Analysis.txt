@@ -1,0 +1,63 @@
+                                    Project Overview 
+                                Student Result Data Analysis
+
+In this project, we analyzed student marks using simple Python steps.
+Here is what we did:
+
+✅ Step 1 — Imported Libraries
+
+We used three important libraries:
+
+pandas → to load and handle data
+
+matplotlib → to create visual graphs
+
+seaborn → to make colorful and better-looking charts
+
+✅ Step 2 — Loaded the Dataset
+
+We read the file "Student Data.csv" from the computer
+and stored it in a DataFrame for analysis.
+
+✅ Step 3 — Explored the Dataset
+
+We:
+
+Displayed the first five rows
+
+Checked the column names and data types
+This helped us understand what the dataset contains.
+
+✅ Step 4 — Performed Data Analysis
+
+We ignored the Name column and analyzed the numeric subject marks.
+
+Calculated the Coefficient of Variation (CV) for each student
+👉 CV = standard deviation ÷ mean
+This tells us how consistent a student’s performance is.
+
+Added the CV as a new column in the DataFrame
+
+Found the best student
+👉 The one with the lowest CV
+(which means their performance is the most stable across subjects)
+
+✅ Step 5 — Created a Visualization
+
+We reshaped the data and created a bar chart showing:
+
+Each student’s score in every subject
+
+Different colors for different subjects
+
+A legend to identify subjects
+
+This graph helps us easily compare student performance.
+
+🎯 Final Outcome
+
+Loaded, explored, analyzed, and visualized student marks
+
+Identified the most consistent performer
+
+Made the results easy to understand using a plot
