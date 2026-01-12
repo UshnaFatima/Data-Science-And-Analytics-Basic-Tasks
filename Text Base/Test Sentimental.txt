@@ -1,0 +1,76 @@
+                                         Project Report
+                                  Text Emotion Analysis Project 
+
+This project reads text from a file, cleans it, removes stop words, and identifies emotions using a predefined list. Finally, it displays the emotions on a bar graph.
+
+✅ Step 1 — Imported Required Libraries
+
+string → to remove punctuation
+
+Counter (collections) → to count repeated emotions
+
+matplotlib → to plot the emotion chart
+
+✅ Step 2 — Read the Input Text
+
+We opened the text file
+read.txt
+and read all of its content into a variable.
+
+✅ Step 3 — Cleaned the Text
+
+To prepare the text for analysis, we did:
+
+converted the text into lowercase
+
+removed punctuation
+
+split the text into individual words
+
+✅ Step 4 — Removed Stop Words
+
+We defined a list of common words such as
+I, you, as, the, is, are, etc.
+These add no meaning to emotional understanding.
+
+We removed all stop words to keep only meaningful words.
+
+✅ Step 5 — Emotion Detection
+
+We used another file called emotion.txt
+which contains word-to-emotion mappings in the form:
+
+happy: joy
+angry: anger
+sad: sadness
+
+
+Steps done:
+
+Read every line from emotion.txt
+
+Split it into word and emotion
+
+Check if the word exists in our filtered word list
+
+If yes, add the emotion to a list
+
+✅ Step 6 — Count the Emotions
+
+We used Counter to count how many times each emotion appears.
+Example output might look like:
+
+{'joy': 3, 'sadness': 1, 'anger': 2}
+
+✅ Step 7 — Visualized the Emotion Counts
+
+We drew a bar graph showing the frequency of each emotion.
+This helps easily see which emotion dominates the text.
+
+🎯 Final Output
+
+The script identifies the emotional tone of a document
+
+Shows the detected emotions and their counts
+
+Displays a bar chart of emotions for visualization
