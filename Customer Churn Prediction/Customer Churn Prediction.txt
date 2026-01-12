@@ -1,0 +1,52 @@
+                                            PROJECT REPORT
+                              Task: Bank Customer Churn Prediction & Analysis
+
+
+Project Overview
+Customer churn (attrition) is one of the most significant issues facing the banking industry today. It costs much more to acquire a new customer than to retain an existing one. 
+
+This project aims to build a high-performing classification model to identify "at-risk" customers. By leveraging the Random Forest algorithm, we not only predict who will leave but also identify the specific behaviors and demographics that lead to churn.
+
+
+
+Data Dictionary
+The dataset consists of 10,000 customers 
+
+
+Methodology
+1. Data Preprocessing
+- Feature Selection: Dropped `RowNumber`, `CustomerId`, and `Surname` as they are unique identifiers with no predictive power.
+- Handling Categorical Data: Applied  Label Encoding  to Gender (Binary).
+- Applied  One-Hot Encoding  to Geography to prevent the model from assuming a mathematical order between countries.
+
+
+2. Exploratory Data Analysis (EDA)
+During analysis, we observed that:
+- Churn rates are significantly higher in  Germany  compared to France and Spain.
+- Older customers (40-60 age bracket) show a higher tendency to exit.
+- Customers with  3 or more products  have an extremely high churn rate, suggesting potential dissatisfaction with complex product bundles.
+
+
+3. Machine Learning Pipeline
+-  Algorithm:  Random Forest Classifier (100 Decision Trees).
+-  Data Splitting:  80% Train / 20% Test.
+-  Stratification:  Used to ensure the minority class (churners) is equally represented in both sets.
+
+
+Model Performance
+The model achieved an  Accuracy of 86.1% .
+
+Metric               | Score 
+Precision (Class 1)  | 0.77 (High confidence when predicting churn) 
+Recall (Class 1)     | 0.45 (Ability to find all churners)
+F1-Score             | 0.57 
+
+
+Business Insights & Recommendations
+Based on the  Feature Importance  analysis, here are the strategic recommendations for the bank:
+
+1.  Targeted Retention for Seniors:  Since  Age  is the top driver, the bank should design loyalty programs or specialized investment products for customers aged 45+.
+2.  Review Multi-Product Strategy:  Customers with many products are leaving. The bank should investigate if these customers are being over-charged or if the products are too difficult to manage together.
+3.  Regional Focus (Germany):  German customers churn at a higher rate. A localized survey is recommended to check if competitors in that region offer better interest rates.
+4.  Engagement Programs:  "Active Members" are much less likely to leave. Encouraging app usage and frequent transactions can reduce churn.
+
